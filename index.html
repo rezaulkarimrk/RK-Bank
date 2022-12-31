@@ -74,11 +74,19 @@
             transactionArea.style.display = 'block';
         });
 
+
+        //balance query
+        function getInput(id){
+            const Amount =   document.getElementById(id).value;
+            const AmountNumber = parseFloat(Amount);
+            return AmountNumber;
+        }
+
         //update balance
-        function UpdateSpan(id, depositNumber){
+        function UpdateSpan(id, newBalance){
             const current=document.getElementById(id).innerText;
             const currentNumber= parseFloat(current);
-            const totalAmount=currentNumber+depositNumber;
+            const totalAmount=currentNumber+newBalance;
             document.getElementById(id).innerText=totalAmount;
         }
         //deposit button event handler
@@ -106,11 +114,7 @@
             document.getElementById('witdrwaAmount').value='';
         });
 
-        function getInput(id){
-            const Amount =   document.getElementById(id).value;
-            const AmountNumber = parseFloat(Amount);
-            return AmountNumber;
-        }
+        
 
         
     </script>
