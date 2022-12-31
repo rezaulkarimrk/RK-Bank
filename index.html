@@ -109,7 +109,7 @@
             const witdrwaAmount =  getInput('witdrwaAmount');
             
             UpdateSpan('witdrawAmount', witdrwaAmount);
-            UpdateSpan('add-balace', -witdrwaAmount);
+            UpdateSpan('add-balace', (-1*witdrwaAmount));
             
             document.getElementById('witdrwaAmount').value='';
         });
